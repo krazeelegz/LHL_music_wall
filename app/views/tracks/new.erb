@@ -1,0 +1,17 @@
+<form method="post" action="/tracks" >
+  <div>
+    <label>Artist / Group</label>
+    <input type="text" name="author" value="<%= @track && @track.author %>">>
+  </div>
+  <div>
+    <label>Song Title</label>
+    <input type="text" name="song_title" value="<%= @track && @track.song_title %>">>
+  </div>
+   <div>
+    <label>Add a YouTube url:</label>
+    <input type="text" name="url" value="<%= @track && @track.url %>">>
+  </div>
+  <div>
+    <input type="submit" value="Submit">
+  </div>
+</form>
