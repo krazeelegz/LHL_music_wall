@@ -1,3 +1,14 @@
+<% if @track && @track.errors.any? %>
+  <div>
+    <strong>There is some issues with your song submission, please fix them:</strong>
+    <ul>
+      <% @track.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
 <form method="post" action="/tracks" >
   <div>
     <label>Artist / Group</label>

@@ -18,6 +18,14 @@ post '/tracks' do
     song_title: params[:song_title],
     url:  params[:url]
   )
-  @track.save
-  redirect '/tracks'
+  if @track.save
+    redirect '/tracks'
+  else
+    erb :'tracks/new'
+  end
+end
+
+get '/tracks/:id' do
+  @track = Track.find params[:id]
+  erb :'tracks/show'
 end
