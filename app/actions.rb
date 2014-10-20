@@ -1,10 +1,22 @@
 # Homepage (Root path)
 get '/' do
-  erb :index
+  session[:user] = 'Krish'
+  erb :index 
 end
 
+get '/signin' do
+  erb :signin
+end
+
+post 'signin' do
+  session[:user] = params[:users_name]
+  redirect '/messages'
+end
+
+
+
 get '/tracks' do
-  @tracks = Track.all
+  @tracks = Track.order(upvotes: :desc)
   erb :'tracks/index'
 end
 
@@ -23,6 +35,15 @@ post '/tracks' do
   else
     erb :'tracks/new'
   end
+end
+
+post '/tracks/:track_id/upvotes' do
+  @track = Track.find(params[:track_id])
+  @track.upvotes ||= 0
+  @track.upvotes += 1
+  # @upvote = @message.upvotes.new(user: current_user)
+  @track.save
+  redirect '/tracks'
 end
 
 get '/tracks/:id' do

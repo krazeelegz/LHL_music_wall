@@ -1,6 +1,9 @@
 <% @tracks.each do |track| %>
   <div class="track">
     <h3><a href="/tracks/<%= track.id %>"><%= track.song_title %></a> <small>(by: <%= track.author %>)</small></h3>
+    <form action="/tracks/<%= track.id %>/upvotes" method="post">
+      <input type='submit' value='Upvote'> (<%= track.upvotes || 0 %> votes)
+    </form>
     <p>
       <%= track.url %>
     </p>
