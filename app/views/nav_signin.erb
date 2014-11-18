@@ -12,6 +12,10 @@
 
     <% else %>
 
+      <form class="navbar-form navbar-right" role="form" method="get" action="/signup">
+      <button type="submit" class="btn btn-success">Sign up</button>
+      </form>
+
       <form class="navbar-form navbar-right" role="form" method="post" action="/login">
         <div class="form-group">
           <input type="text" placeholder="Email" name="email" class="form-control">
@@ -27,16 +31,4 @@
     </ul>
     <a href="/tracks"><h3 class="text-muted">Music Wall</h3></a>
   </div>
-</div>
-
-
-
-
-
-<div class="container">
-      <div class="jumbotron">
-        <h2>Welcome to Music Wall</h2>
-        <p class="lead">where you can share songs with anyone in the world.</p>
-        <p><a class="btn btn-lg btn-success" href="/signup" role="button">Sign up now</a></p>
-      </div>
 </div>

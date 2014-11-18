@@ -1,0 +1,83 @@
+.sharesong {
+  width: 110px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.track {
+  width: 100%;
+}
+
+
+
+.upvote-form input{
+  height: 10px;
+}
+
+.upvote-form{
+    float: left;
+    margin-right: 20px;
+}
+
+.track p.num-upvotes{
+    float: left;
+    margin-right: 20px;
+    margin-left: 1px;
+    clear: both;
+}
+
+.track p small.timestamp{
+    float: left;
+    margin-top: 1.5px;
+}
+
+body > div:nth-child(2) > form > div:nth-child(1) > label {
+  width: 110px;
+}
+
+body > div:nth-child(2) > form > div:nth-child(2) > label {
+  width: 110px;
+}
+
+body > div:nth-child(2) > form > div:nth-child(3) > label {
+  width: 110px;
+  margin-top: -20px;
+}
+
+body > div:nth-child(2) > form > div:nth-child(3)
+
+.container > form > div:nth-child(3) {
+  margin-top: 15px;
+}
+
+body > div:nth-child(2) > form > div:nth-child(4) > input[type="submit"] {
+  margin-top: 15px;
+}
+
+body > div:nth-child(1) > div > a:hover {
+  text-decoration: none;
+}
+
+.comment-rating-form {
+  
+}
+
+body > div:nth-child(2) > form > div:nth-child(1) > p:nth-child(1) {
+  margin-top: 50px;
+}
+
+body > div:nth-child(2) > form > div:nth-child(2) > input[type="submit"] {
+  margin-bottom: 40px;
+}
+
+body > div:nth-child(2) > div.review {
+  margin-top: 50px;
+  border-style: solid;
+  border-width: 2px;
+  padding: 25px 25px 25px 25px;
+}
+
+body > div:nth-child(2) > form > div:nth-child(3) > input[type="submit"] {
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
